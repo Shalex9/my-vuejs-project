@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import About from './views/About.vue'
+import Navbar from './components/Navbar.vue'
+import JsonPost from './views/JsonPost.vue'
 
 Vue.use(Router)
 
@@ -11,15 +14,17 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      components: { default: Home, header: Navbar }
     },
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      components: { default: About, header: Navbar }
+    },
+    {
+      path: '/jsonpost',
+      name: 'JsonPost',
+      components: { default: JsonPost, header: Navbar }
     }
   ]
 })
