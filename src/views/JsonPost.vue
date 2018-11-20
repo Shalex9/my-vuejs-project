@@ -5,7 +5,7 @@
             <md-tabs class="md-transparent" md-alignment="fixed" md-active-tab="tab-home">
                 <md-tab id="tab-home" md-label="All Post" >
                     <h3 class="count">Count posts: {{countposts}}</h3>
-                    <div class="post" v-for='post in posts'>
+                    <div class="post" v-for='post in posts' :key="post.id">
                         <span>{{post.id}}</span>
                         <h3>{{post.title}}</h3>
                         <p>{{post.body}}</p>

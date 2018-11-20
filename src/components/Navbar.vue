@@ -17,7 +17,12 @@
                         <md-list>
                             <md-list-item to="/jsonpost">
                                 <i class="material-icons">dashboard</i>
-                                <p class="hidden-lg hidden-md"><router-link to="/jsonpost">JsonPost</router-link></p>
+                                <p class="hidden-lg hidden-md">JsonPost</p>
+                            </md-list-item>
+
+                            <md-list-item to="/films">
+                                <i class="material-icons">ondemand_video</i>
+                                <p class="hidden-lg hidden-md">Films</p>
                             </md-list-item>
 
                             <md-list-item to="/about">
