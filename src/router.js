@@ -6,6 +6,7 @@ import Navbar from './components/Navbar.vue'
 import JsonPost from './views/JsonPost.vue'
 import Films from './views/Films.vue'
 import FilmDetails from './views/FilmDetails.vue'
+import ActorDetails from './views/ActorDetails.vue'
 
 Vue.use(Router)
 
@@ -37,6 +38,11 @@ export default new Router({
       path: '/films/:id',
       name: 'filmDetails',
       components: { default: FilmDetails, header: Navbar }
+    },
+    {
+      path: '/actor/:id',
+      name: 'actorDetails',
+      components: { default: ActorDetails, header: Navbar }
     }
   ]
 })

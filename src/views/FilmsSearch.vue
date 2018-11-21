@@ -1,17 +1,5 @@
 <template>
-    <div class="container-fluid wrapper">
-        <h1>Откройте для себя новые фильмы</h1>
-
-        <md-tabs class="md-primary" md-alignment="centered">
-            <md-tab id="tab-popular" md-label="Популярные" @click="switchView('FilmsPopular')"></md-tab>
-            <md-tab id="tab-now" md-label="В прокате" @click="switchView('FilmsNow')"></md-tab>
-            <md-tab id="tab-search" md-label="Поиск фильма" @click="switchView('FilmsSearch')"></md-tab>
-            <md-tab id="tab-top" md-label="ТОП фильмы" @click="switchView('FilmsTop')"></md-tab>
-            <md-tab id="tab-upcoming" md-label="Ожидаемые" @click="switchView('FilmsUpcoming')"></md-tab>
-        </md-tabs>
-
-        <component :is="currentView"></component>
-
+    <div>
         <div class="search row">
             <md-field>
                 <label>Поиск фильма</label>
@@ -23,9 +11,9 @@
         </div>
         <div class="md-layout md-gutter md-alignment-center" v-if="isFilmSearch && isResult">
             <div class="" v-for="film in listFilms" :key="film.id">
-                <!--<keep-alive>-->
+                <keep-alive>
                     <film-card v-bind:currentFilm="film" style="height: 100%"></film-card>
-                <!--</keep-alive>-->
+                </keep-alive>
             </div>
         </div>
         <div v-else-if="isFilmSearch && isResult == false">Нет результата</div>
@@ -35,17 +23,11 @@
 
 <script>
     import FilmCard from '../components/FilmCard.vue'
-    import FilmsNow from '../views/FilmsNow.vue'
-    import FilmsPopular from '../views/FilmsPopular.vue'
-    import FilmsTop from '../views/FilmsTop.vue'
-    import FilmsUpcoming from '../views/FilmsUpcoming.vue'
-    import FilmsSearch from '../views/FilmsSearch.vue'
 
     export default {
-        name: 'films',
+        name: 'FilmsSearch',
         data () {
             return {
-                currentView: 'FilmsNow',
                 isFilmSearch: false,
                 listFilms: [],
                 currentFilm: {},
@@ -68,9 +50,6 @@
             }
         },
         methods: {
-            switchView: function(view) {
-                this.currentView = view
-            },
             searchFilms: function() {
                 this.listFilms = []
                 try {
@@ -89,11 +68,10 @@
             }
         },
         components: {
-            FilmCard, FilmsNow, FilmsTop, FilmsPopular, FilmsUpcoming, FilmsSearch
+            FilmCard
         }
     }
 </script>
-
 
 <style lang="scss" scoped>
     .search {

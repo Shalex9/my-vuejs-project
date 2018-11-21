@@ -9,7 +9,6 @@
         <md-card-content>
             <div class="md-title">{{currentFilm.title}}</div>
             <div class="md-subhead">{{currentFilm.release_date}}</div>
-            <!--{{currentFilm.overview}}-->
         </md-card-content>
 
         <md-card-actions>
