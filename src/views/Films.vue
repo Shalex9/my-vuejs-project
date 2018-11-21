@@ -1,16 +1,16 @@
 <template>
-    <div class="wrapper">
+    <div class="container-fluid wrapper">
         <h1>Search Films</h1>
-        <div class="search">
-            <md-field>
+        <div class="search row">
+            <md-field class="col-md-3 col-md-offset-4">
                 <label>Search Film</label>
                 <md-input v-model="filmName" placeholder="Search Film"></md-input>
                 <span class="md-error">There is an error</span>
             </md-field>
-            <md-button class="md-raised md-primary" :disabled="searchEnable" prevent @click="searchFilms" @keyup.13="searchFilms">Search</md-button>
+            <md-button class="md-raised md-primary col-md-1" :disabled="searchEnable" prevent @click="searchFilms" @keyup.13="searchFilms">Search</md-button>
         </div>
         <div class="md-layout md-gutter md-alignment-center" v-if="isResult">
-            <div class="md-layout-item md-medium-size-25 md-small-size-50 md-xsmall-size-100" v-for="film in listFilms"  :key="film.id">
+            <div class="" v-for="film in listFilms"  :key="film.id">
                 <film-card v-bind:currentFilm="film" style="height: 100%"></film-card>
             </div>
         </div>
@@ -65,24 +65,25 @@ export default {
 
 
 <style lang="scss" scoped>
-    .search {
-        display: flex;
-    }
+    // .search {
+    //     display: flex;
+    // }
     .md-field {
         width: 15%;
-        margin: 0 auto;
+        margin: 20px 33,3% !important;
+        margin-left: 33,3% !important;
     }
-    .md-layout-item {
-        height: 620px !important;
-        margin-top: 8px;
-        margin-bottom: 8px;
+    //.md-layout-item {
+    //     height: 620px !important;
+    //     margin-top: 8px;
+    //     margin-bottom: 8px;
 
-        &:after {
-        width: 100%;
-        height: 100%;
-        display: block;
-        background: md-get-palette-color(purple, 200);
-        content: " ";
-    }
-  }
+    //     &:after {
+    //     width: 100%;
+    //     height: 100%;
+    //     display: block;
+    //     background: md-get-palette-color(purple, 200);
+    //     content: " ";
+    //     }
+    //}
 </style>
