@@ -12,7 +12,7 @@
         </md-card-content>
 
         <md-card-actions>
-          <md-button><router-link :to="{ name: 'filmDetails', params: { id: this.filmDetail.id}}">See more</router-link></md-button>
+          <md-button class="md-primary" :to="{ name: 'filmDetails', params: { id: this.filmDetail.id}}">Подробнее</md-button>
         </md-card-actions>
     </md-card>
 </template>

@@ -16,7 +16,7 @@
                 </keep-alive>
             </div>
         </div>
-        <div v-else-if="isFilmSearch && isResult == false">Нет результата</div>
+        <div v-else-if="isFilmSearch && isResult == false">Нет фильмов, удовлетворяющих условиям поиска.</div>
         <div v-if="filmName == ''">Начните поиск...</div>
     </div>
 </template>
@@ -77,6 +77,7 @@
     .search {
         display: flex;
         justify-content: center;
+        margin: 50px;
         .searchBtn{
             position: absolute;
             right: 37%;
@@ -84,5 +85,10 @@
     }
     .md-field {
         width: 25%;
+    }
+    .md-card {
+        max-height: 650px;
+        min-height: 650px;
+        position: relative;
     }
 </style>
