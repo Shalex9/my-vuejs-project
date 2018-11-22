@@ -12,22 +12,17 @@
     import filmsMixin from './AllFilmsMixin.js'
 
     export default {
-        name: 'FilmsPopular',
+        name: 'yFilmsNow',
         mixins: [filmsMixin],
         data(){
             return {
-                typeSearch: 'popular'
+                typeSearch: 'now_playing'
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .md-card {
-        max-height: 650px;
-        min-height: 650px;
-        position: relative;
-    }
     .md-field {
         width: 25%;
     }

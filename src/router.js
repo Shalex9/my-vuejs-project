@@ -7,6 +7,7 @@ import JsonPost from './views/JsonPost.vue'
 import Films from './views/Films.vue'
 import FilmDetails from './views/FilmDetails.vue'
 import ActorDetails from './views/ActorDetails.vue'
+// import VuetifyFilmCard from './components/VuetifyFilmCard.vue'
 
 Vue.use(Router)
 
@@ -15,34 +16,39 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/vue',
       name: 'home',
       components: { default: Home, header: Navbar }
     },
     {
-      path: '/about',
+      path: '/vue/about',
       name: 'about',
       components: { default: About, header: Navbar }
     },
     {
-      path: '/jsonpost',
+      path: '/vue/jsonpost',
       name: 'JsonPost',
       components: { default: JsonPost, header: Navbar }
     },
     {
-      path: '/films',
+      path: '/vue/films',
       name: 'films',
       components: { default: Films, header: Navbar }
     },
     {
-      path: '/films/:id',
+      path: '/vue/films/:id',
       name: 'filmDetails',
       components: { default: FilmDetails, header: Navbar }
     },
     {
-      path: '/actor/:id',
+      path: '/vue/actor/:id',
       name: 'actorDetails',
       components: { default: ActorDetails, header: Navbar }
-    }
+    },
+    // {
+    //   path: '/vue/vuetify',
+    //   name: 'VuetifyFilmCard',
+    //   components: { default: VuetifyFilmCard, header: Navbar }
+    // }
   ]
 })

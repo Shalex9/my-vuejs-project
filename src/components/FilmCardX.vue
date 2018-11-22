@@ -2,7 +2,7 @@
    <md-card md-with-hover>
         <md-card-header>
             <md-card-media>
-                <img :src="currentFilm.poster_path ? 'https://image.tmdb.org/t/p/w342'+currentFilm.poster_path : 'http://shalex.info/assets/img/not-poster_path_320x480.jpg'" :alt="currentFilm.title ? currentFilm.title : 'Нет данных'">
+                <img :src="currentFilm.backdrop_path ? 'https://image.tmdb.org/t/p/w342'+currentFilm.backdrop_path : 'http://shalex.info/assets/img/not-poster_path_320x480.jpg'" :alt="currentFilm.title ? currentFilm.title : 'Нет данных'">
             </md-card-media>
         </md-card-header>
 
@@ -36,15 +36,12 @@
     }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
     .md-card {
+        margin: 25px;
+        min-height: 460px;
+        max-height: 460px;
         position: relative;
-        width: 320px;        
-        max-height: 700px;
-        min-height: 700px;
-        margin: 4px;
-        display: inline-block;
-        vertical-align: top;
         overflow: hidden;
     }
     .md-card-header {
@@ -59,7 +56,7 @@
 
     .box {
         position: absolute;
-        top: 89%;
+        top: 83%;
         left: 10%;
         p {
             width: 15%;
@@ -95,7 +92,7 @@
     }
     .btnShowMore {
         position: absolute;
-        top: 91%;
+        top: 85%;
         right: 10%;
         &:hover {
             text-decoration: none

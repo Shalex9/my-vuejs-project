@@ -12,22 +12,17 @@
     import filmsMixin from './AllFilmsMixin.js'
 
     export default {
-        name: 'FilmsUpcoming',
+        name: 'yFilmsTop',
         mixins: [filmsMixin],
         data(){
             return {
-                typeSearch: 'upcoming'
+                typeSearch: 'top_rated'
             }
         }
     }
 </script>
 
 <style lang="scss" scoped>
-    .md-card {
-        max-height: 650px;
-        min-height: 650px;
-        position: relative;
-    }
     .md-field {
         width: 25%;
     }

@@ -15,19 +15,24 @@
                     <div class="md-collapse-wrapper">
                         <!--<mobile-menu nav-mobile-section-start="false"></mobile-menu>-->
                         <md-list>
-                            <md-list-item to="/jsonpost">
-                                <i class="material-icons">dashboard</i>
+                            <md-list-item to="/vue">
+                                <i class="material-icons">home</i>
+                                <p class="hidden-lg hidden-md">Главная</p>
+                            </md-list-item>
+
+                            <md-list-item to="/vue/jsonpost">
+                                <i class="material-icons">library_books</i>
                                 <p class="hidden-lg hidden-md">JsonPost</p>
                             </md-list-item>
 
-                            <md-list-item to="/films">
+                            <md-list-item to="/vue/films">
                                 <i class="material-icons">ondemand_video</i>
-                                <p class="hidden-lg hidden-md">Films</p>
+                                <p class="hidden-lg hidden-md">Фильмы</p>
                             </md-list-item>
 
-                            <md-list-item to="/about">
+                            <md-list-item to="/vue/about">
                                 <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">About</p>
+                                <p class="hidden-lg hidden-md">О проекте</p>
                             </md-list-item>
                         </md-list>
                     </div>

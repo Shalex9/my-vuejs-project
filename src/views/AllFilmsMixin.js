@@ -1,4 +1,6 @@
 import FilmCard from '../components/FilmCard.vue';
+import FilmCardX from '../components/FilmCardX.vue';
+// import VuetifyFilmCard from '../components/VuetifyFilmCard.vue';
 const filmsMixin = {
     data: function() {
         return {
@@ -26,7 +28,7 @@ const filmsMixin = {
         this.searchFilms()
     },
     components: {
-        FilmCard
+        FilmCard, FilmCardX
     }
 }
 

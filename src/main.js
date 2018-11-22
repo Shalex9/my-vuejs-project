@@ -12,11 +12,11 @@ import { MdToolbar, MdButton, MdList, MdTabs, MdField, MdSwitch, MdCard, MdRippl
 import Vuetify from 'vuetify'
 // import MaterialKit from './plugins/material-kit'
 
+Vue.use(Vuetify)
 // Vue.use(MaterialKit)
 // Vue.use(VueRouter)
 Vue.use(VueMaterial)
 Vue.use(VueResource)
-Vue.use(Vuetify)
 Vue.use(MdField)
 Vue.use(MdSwitch)
 Vue.use(MdToolbar)

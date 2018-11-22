@@ -85,13 +85,12 @@
             <h2 style="margin: 50px;">В главных ролях:</h2>
             <div class="actorsBox" v-if="isActors">
                 <div class="actors" v-for="actor in listActors"  :key="actor.id">
-                    <router-link :to="{ name: 'actorDetails', params: { id: actor.id}}">
+                    <router-link :to="{ name: 'actorDetails', params: { id: actor.id}}" class="actor-router">
                         <actor-card :currentActor="actor"></actor-card>
                     </router-link>
                 </div>
             </div>
             <div v-else>Not result</div>
-            <!--<button md-button color="primary">Показать всех</button>-->
         </div>
     </div>
 
@@ -110,7 +109,6 @@
                 listCompany: [],
                 listGenres: [],
                 listActors: {},
-                imdb_id: null,
                 vote_average: 0,
                 movieUrl: "https://api.themoviedb.org/3/movie/",
                 personUrl: "https://api.themoviedb.org/3/person/",
@@ -159,8 +157,7 @@
                     } else { 
                          this.listGenres =  false 
                     }         
-                    this.currentFilm.vote_average ?  this.vote_average = this.currentFilm.vote_average * 10 : "0"  
-                    this.imdb_id = this.currentFilm.imdb_id                        
+                    this.currentFilm.vote_average ?  this.vote_average = this.currentFilm.vote_average * 10 : "0"                        
                 }, function(error) {
                     this.isResult = false
                 })
@@ -255,10 +252,6 @@
             margin-right: 10px;
         }
     }
-    .overview {
-        h3 {}
-        p {}
-    }
     .company{
         margin: 10px auto;
     }
@@ -269,6 +262,11 @@
     .actors {
         width: 11%;
         height: 360px;
+        .actor-router {
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
     .md-card {
         width: 100% !important;
