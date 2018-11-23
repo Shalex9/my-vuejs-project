@@ -2,7 +2,7 @@
     <md-toolbar class="md-transparent">
         <div class="md-toolbar-row">
             <div class="md-toolbar-section-start">
-                <h3 class="md-title"><router-link to="/vue"><img src="../assets/img/logo-shalex.png" alt="shalex"/></router-link></h3>
+                <h3 class="md-title"><router-link to="/"><img src="../assets/img/logo-shalex.png" alt="shalex"/></router-link></h3>
             </div>
             <div class="md-toolbar-section-end">
                 <md-button class="md-just-icon md-simple md-toolbar-toggle">
@@ -13,26 +13,25 @@
 
                 <div class="md-collapse">
                     <div class="md-collapse-wrapper">
-                        <!--<mobile-menu nav-mobile-section-start="false"></mobile-menu>-->
                         <md-list>
-                            <md-list-item to="/vue">
+                            <md-list-item to="/">
                                 <i class="material-icons">home</i>
-                                <p class="hidden-lg hidden-md">Главная</p>
+                                <p class="hidden-sm hidden-xs">Главная</p>
                             </md-list-item>
 
-                            <md-list-item to="/vue/jsonpost">
-                                <i class="material-icons">library_books</i>
-                                <p class="hidden-lg hidden-md">JsonPost</p>
-                            </md-list-item>
-
-                            <md-list-item to="/vue/films">
+                            <md-list-item to="/films">
                                 <i class="material-icons">ondemand_video</i>
-                                <p class="hidden-lg hidden-md">Фильмы</p>
+                                <p class="hidden-sm hidden-xs">Фильмы</p>
+                            </md-list-item>
+                            
+                            <md-list-item to="/jsonpost">
+                                <i class="material-icons">library_books</i>
+                                <p class="hidden-sm hidden-xs">JsonPost</p>
                             </md-list-item>
 
-                            <md-list-item to="/vue/about">
+                            <md-list-item to="/about">
                                 <i class="material-icons">person</i>
-                                <p class="hidden-lg hidden-md">О проекте</p>
+                                <p class="hidden-sm hidden-xs">О проекте</p>
                             </md-list-item>
                         </md-list>
                     </div>

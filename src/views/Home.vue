@@ -1,7 +1,9 @@
 <template>
   <div class="wrapper">
-    <div class="section page-header header-filter" :style="bgHeader">
-      <Main msg="First project with Vue.js"/>
+    <div class="section page-header header-filter">
+      <!--<Main msg="First project with Vue.js"/>-->
+      <h1>First project with Vue.js</h1><br />
+      <h3><router-link to='/films'>Go to page with films -></router-link></h3>
     </div>
   </div>
 </template>
@@ -11,30 +13,16 @@ import Main from '@/components/Main.vue'
 
 export default {
   name: 'home',
-  props: {
-    header: {
-      type: String,
-      default: require('@/assets/img/bg-header.jpg')
-    }
-  },
-  computed: {
-    bgHeader() {
-      return {
-        backgroundImage: `url(${this.header})`
-      }
-    }
-  },
-  data () {
-    return {
-
-    }
-  },
   components: {
     Main
   }
 }
 </script>
 <style lang="scss" scoped>
+  .section {
+    background: url("../assets/img/bg-header.jpg");
+    color: white;
+  }
   .page-header {
       height: 100vh;
       background-position: center center;

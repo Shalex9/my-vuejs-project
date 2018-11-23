@@ -12,36 +12,36 @@ import ActorDetails from './views/ActorDetails.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/vue',
+      path: '/',
       name: 'home',
       components: { default: Home, header: Navbar, footer: Footer }
     },
     {
-      path: '/vue/about',
+      path: '/about',
       name: 'about',
       components: { default: About, header: Navbar, footer: Footer }
     },
     {
-      path: '/vue/jsonpost',
+      path: '/jsonpost',
       name: 'JsonPost',
       components: { default: JsonPost, header: Navbar, footer: Footer }
     },
     {
-      path: '/vue/films',
+      path: '/films',
       name: 'films',
       components: { default: Films, header: Navbar, footer: Footer }
     },
     {
-      path: '/vue/films/:id',
+      path: '/films/:id',
       name: 'filmDetails',
       components: { default: FilmDetails, header: Navbar, footer: Footer }
     },
     {
-      path: '/vue/actor/:id',
+      path: '/actor/:id',
       name: 'actorDetails',
       components: { default: ActorDetails, header: Navbar, footer: Footer }
     },
