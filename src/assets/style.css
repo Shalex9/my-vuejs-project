@@ -9,3 +9,7 @@
     position: relative;
     z-index: 3;
 }
+
+div * {
+    color: red;
+}
