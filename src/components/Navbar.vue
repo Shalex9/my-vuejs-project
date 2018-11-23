@@ -2,7 +2,7 @@
     <md-toolbar class="md-transparent">
         <div class="md-toolbar-row">
             <div class="md-toolbar-section-start">
-                <h3 class="md-title"><router-link to="/">MyFirstVueProject</router-link></h3>
+                <h3 class="md-title"><router-link to="/vue"><img src="../assets/img/logo-shalex.png" alt="shalex"/></router-link></h3>
             </div>
             <div class="md-toolbar-section-end">
                 <md-button class="md-just-icon md-simple md-toolbar-toggle">

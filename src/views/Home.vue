@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <div class="section page-header header-filter" :style="bgHeader">
-      <!--<img alt="Vue logo" src="../assets/img/bg-header.jpg">-->
       <Main msg="First project with Vue.js"/>
     </div>
   </div>
@@ -56,7 +55,4 @@ export default {
   .header-filter {
       position: relative;
   }
-  // .section {
-  //     padding: 70px 0;
-  // }
 </style>

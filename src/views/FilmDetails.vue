@@ -2,7 +2,8 @@
     <div class="container-fluid">
         <div class="row info">
             <div class="film-detail-bg">
-                <img :src="'https://image.tmdb.org/t/p/original' +  this.currentFilm.backdrop_path">
+                <!--<img :src="'https://image.tmdb.org/t/p/original' +  this.currentFilm.backdrop_path">-->
+                <img :src="this.currentFilm.backdrop_path ? 'https://image.tmdb.org/t/p/original'+this.currentFilm.backdrop_path : ''" />
             </div>
 
             <div class="film-detail-wrapper"> 
@@ -268,13 +269,15 @@
             }
         }
     }
-    .md-card {
-        width: 100% !important;
-    }
-    .md-card-content {
-        padding: 5px;
-    }
-    .md-card .md-title {
-        font-size: 18px;
-    }
+    // .md-card {
+    //     width: 100% !important;
+    //     min-height: 350px;
+    //     max-height: 350px;
+    // }
+    // .md-card-content {
+    //     padding: 5px;
+    // }
+    // .md-card .md-title {
+    //     font-size: 18px;
+    // }
 </style>

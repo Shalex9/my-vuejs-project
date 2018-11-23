@@ -1,11 +1,8 @@
 <template>
   <div id="app">
-    <!--<div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>-->
     <router-view name="header"></router-view>
-    <router-view></router-view>
+    <router-view style="min-height: 550px;"></router-view>
+    <router-view name="footer"></router-view>
   </div>
 </template>
 

@@ -24,7 +24,8 @@
 <style lang="scss" scoped>
     .md-card {
         min-height: 350px;
-        max-height: 350px;
+        max-height: 350px;        
+        overflow: hidden;
         .md-card-header {
             padding: 0 !important;
         }

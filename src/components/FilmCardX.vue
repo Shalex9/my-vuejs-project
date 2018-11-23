@@ -2,7 +2,7 @@
    <md-card md-with-hover>
         <md-card-header>
             <md-card-media>
-                <img :src="currentFilm.backdrop_path ? 'https://image.tmdb.org/t/p/w342'+currentFilm.backdrop_path : 'http://shalex.info/assets/img/not-poster_path_320x480.jpg'" :alt="currentFilm.title ? currentFilm.title : 'Нет данных'">
+                <img :src="currentFilm.backdrop_path ? 'https://image.tmdb.org/t/p/w342'+currentFilm.backdrop_path : 'http://shalex.info/assets/img/not-backdrop_path_500x281.jpg'" :alt="currentFilm.title ? currentFilm.title : 'Нет данных'">
             </md-card-media>
         </md-card-header>
 
