@@ -27,9 +27,11 @@
                 <div class="md-layout md-gutter md-alignment-center" v-if="isFilmSearch && isResult">
                     <div class="" v-for="film in listFilms" :key="film.id">
                         <keep-alive>
-                            <film-card v-bind:currentFilm="film" style="height: 100%"></film-card>
+                            <film-card :currentFilm="film" style="height: 100%"></film-card>
                         </keep-alive>
                     </div>
+                    <md-button v-if="listFilms[0] && !loading" class="md-raised md-primary" @click="getNextPageFilms">Подгрузить еще фильмов</md-button>
+                    <img class='loading' v-if="loading" src='../assets/img/loading.gif'>
                 </div>
                 <div v-else-if="isFilmSearch && isResult == false">Нет фильмов, удовлетворяющих условиям поиска.</div>
                 <div v-if="filmName == ''">Начните поиск...</div>
@@ -39,6 +41,8 @@
                     <div v-for="film in listFilms" :key="film.id"  class="col-md-6">
                         <film-card-x :currentFilm="film"></film-card-x>
                     </div>
+                    <md-button v-if="listFilms[0] && !loading" class="md-raised md-primary" @click="getNextPageFilms">Подгрузить еще фильмов</md-button>
+                    <img class='loading' v-if="loading" src='../assets/img/loading.gif'>
                 </div>
                 <div v-else-if="isFilmSearch && isResult == false">Нет фильмов, удовлетворяющих условиям поиска.</div>
                 <div v-if="filmName == ''">Начните поиск...</div>
@@ -71,10 +75,12 @@
         name: 'films',
         data () {
             return {
+                loading: false,
                 isSearch: true,
                 layout: 'y',
                 currentView: 'FilmsSearch',
                 filmName : '',
+                pageIndex: 1,   
                 isFilmSearch: false,
                 listFilms: [],
                 currentFilm: {},
@@ -85,8 +91,8 @@
             }
         },
         computed: {
-            resource: function(){
-                return this.$resource(this.searchUrl + this.apiKey + "&query=" + this.filmName + this.language + "&page=1")
+            link: function(){
+                return this.$resource(this.searchUrl + this.apiKey + "&query=" + this.filmName + this.language + "&page=" + this.pageIndex)
             },
         },
         methods: {
@@ -101,12 +107,22 @@
                 this.isSearch = true
             },
             searchFilms: function() {
+                this.loading = true
                 this.listFilms = []
-                this.resource.get().then(function(response){
-                    this.listFilms = response.data.results
+                this.link.get().then(res => {
+                    this.listFilms = res.data.results
                     this.isFilmSearch = true
-                    if(response.data.results.length > 0)
+                    this.loading = false
+                    if(res.data.results.length > 0)
                         this.isResult = true
+                })
+            },
+            getNextPageFilms: function() {
+                this.loading = true
+                this.pageIndex++;
+                this.link.get().then(res => {
+                    this.listFilms = [...this.listFilms, ...res.data.results] 
+                    this.loading = false
                 })
             }
         },

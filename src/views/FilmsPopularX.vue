@@ -5,15 +5,9 @@
                 <film-card-x :currentFilm="film"></film-card-x>
             </div>
         </div>
+        <md-button v-if="listFilms[0] && !loading" class="md-raised md-primary" @click="getNextPageFilms">Подгрузить еще фильмов</md-button>
+        <img class='loading' v-if="loading" src='../assets/img/loading.gif'>
     </div>
-
-    <!--<v-layout row wrap>
-        <v-flex v-for="film in listFilms" :key="film.id" xs4>
-            <v-card flat tile>
-                <vuetify-film-card></vuetify-film-card>
-            </v-card>
-        </v-flex>
-    </v-layout>-->
 </template>
 
 <script>

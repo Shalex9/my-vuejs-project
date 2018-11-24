@@ -1,18 +1,56 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-    <Main msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="boxLogo">
+          <img src="../assets/img/vue.png" alt="Vue">
+        </div>
+        <h1>Это мой первая работа на Vue.js</h1>
+        <!--<p>Учил Vue.js с нуля по ресурсу <a href="https://metanit.com/web/vuejs/">Metanit.com</a>, 
+          а также некоторым видео курсам по youtube.
+        </p>-->
+        <p>В этом проекте работал с API сайта <a href="https://www.themoviedb.org/discover/movie?language=ru-RU">TheMovieDB</a>. <br /> 
+          Извлекая данные с этого ресурса есть возможность получать фильмы как с помощью <b>поиска по названию</b>, так и по различным <b>категориям</b>. 
+          Карточки фильмов можно просматривать в двух вариантах: вертикальном и горизонтальном. 
+          Фильмы подгружаются по 20 штук. Внизу, под последним рядом фильмов расроложена кнопка "<b>Подгрузить еще фильмов</b>", 
+          нажав на которую добавится следующая порция из 20 фильмов(если такая имеется). 
+          Во время загрузки фильмов выполняется <b>анимация</b>. <br />
+          Нажав кнопку подробнее на любом из понравившихся фильмов Вы перейдете к <b>странице детального обзора выбранного фильма</b>. 
+          Если на ресурсе TheMovieDB содежатся данные об этом фильме, - на этой странице будет предоставленны все эти данные. <br />
+          Также в деталях фильма отображаются несколько основных актеров, а кликнув по карточке с актером - 
+          есть возможность перейти на <b>страницу деталей данного актера</b>.
+        </p>
+        
+        <h3>Код работы на гитхабе:</h3>
+        <md-button href="https://github.com/Shalex9/my-vuejs-project" target="_blank" class="md-icon-button" style="font-size: 40px;"><i class="fab fa-github"></i></md-button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 
-import Main from '@/components/Main.vue'
 
 export default {
   name: 'about',
-  components: {
-    Main
-  }
 }
 </script>
+
+<style lang="scss">
+  .about {
+    background: #eee
+  }
+  .boxLogo {
+    img {
+        max-width: 160px;
+        width: 100%;
+    }
+  }
+  .about {
+    padding: 50px;
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+</style>

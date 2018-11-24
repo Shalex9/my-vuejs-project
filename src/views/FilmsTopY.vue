@@ -5,6 +5,8 @@
                 <film-card :currentFilm="film" style="height: 100%"></film-card>
             </div>
         </div>
+        <md-button v-if="listFilms[0] && !loading" class="md-raised md-primary" @click="getNextPageFilms">Подгрузить еще фильмов</md-button>
+        <img class='loading' v-if="loading" src='../assets/img/loading.gif'>
     </div>
 </template>
 

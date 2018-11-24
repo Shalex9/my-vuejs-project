@@ -2,7 +2,8 @@
     <md-toolbar class="md-transparent">
         <div class="md-toolbar-row">
             <div class="md-toolbar-section-start">
-                <h3 class="md-title"><router-link to="/"><img src="../assets/img/logo-shalex.png" alt="shalex"/></router-link></h3>
+                <!--<h3 class="md-title"><router-link to="/"><img src="../assets/img/logo-shalex.png" alt="shalex"/></router-link></h3>-->
+                <a href="http://shalex.info/ru/" class="md-title"><img src="../assets/img/logo-shalex.png" alt="shalex"/></a>
             </div>
             <div class="md-toolbar-section-end">
                 <md-button class="md-just-icon md-simple md-toolbar-toggle">
@@ -23,11 +24,11 @@
                                 <i class="material-icons">ondemand_video</i>
                                 <p class="hidden-sm hidden-xs">Фильмы</p>
                             </md-list-item>
-                            
-                            <md-list-item to="/jsonpost">
+
+                            <!--<md-list-item to="/jsonpost">
                                 <i class="material-icons">library_books</i>
                                 <p class="hidden-sm hidden-xs">JsonPost</p>
-                            </md-list-item>
+                            </md-list-item>-->
 
                             <md-list-item to="/about">
                                 <i class="material-icons">person</i>
@@ -130,5 +131,9 @@
 .md-list-item a i + p {
     margin: 0;
     margin-left: 5px !important;
+}
+.loading {
+    width: 100px !important;
+    height: 100px !important;
 }
 </style>
