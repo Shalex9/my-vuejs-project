@@ -26,12 +26,12 @@
                                 </div>
                             </div>
                             <p>Рейтинг фильма</p>
-                            <a href="#" class="set-favorite-false" data-toggle="dropdown" >
+                            <!--<a href="#" class="set-favorite-false" data-toggle="dropdown" >
                                 <i class="material-icons md-white" fxFlex="10%">turned_in_not</i>
                             </a>
                             <a href="" data-toggle="dropdown">
                                 <i class="material-icons md-white" fxFlex="10%">turned_in</i>
-                            </a>
+                            </a>-->
                         </div>
 
                         <div class="overview">

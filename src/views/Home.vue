@@ -8,7 +8,7 @@
           <div class="md-layout-item">
             <div class="profile">
               <div class="avatar">
-                <img :src="img" alt="Alexander" class="rounded-circle">
+                <img src="../assets/img/shalex.jpg" alt="Alexander" class="rounded-circle">
               </div>
               <div class="name">
                 <h3 class="title">Александр Шевчук</h3>
