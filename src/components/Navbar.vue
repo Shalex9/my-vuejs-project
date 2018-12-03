@@ -25,6 +25,11 @@
                                 <p class="hidden-sm hidden-xs">Фильмы</p>
                             </md-list-item>
 
+                            <md-list-item to="/news">
+                                <i class="material-icons">library_books</i>
+                                <p class="hidden-sm hidden-xs">Новости</p>
+                            </md-list-item>
+
                             <!--<md-list-item to="/jsonpost">
                                 <i class="material-icons">library_books</i>
                                 <p class="hidden-sm hidden-xs">JsonPost</p>

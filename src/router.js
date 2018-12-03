@@ -8,6 +8,7 @@ import JsonPost from './views/JsonPost.vue'
 import Films from './views/Films.vue'
 import FilmDetails from './views/FilmDetails.vue'
 import ActorDetails from './views/ActorDetails.vue'
+import NewsApi from './views/NewsApi.vue'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/jsonpost',
       name: 'JsonPost',
       components: { default: JsonPost, header: Navbar, footer: Footer }
+    },
+    {
+      path: '/news',
+      name: 'news',
+      components: { default: NewsApi, header: Navbar, footer: Footer }
     },
     {
       path: '/films',
