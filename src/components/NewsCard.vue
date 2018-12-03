@@ -27,10 +27,10 @@ export default {
     methods: {
         chanceDate: function() {
             var newDate = this.currentNews.publishedAt.toString().replace("T", " в ").replace("Z", "")
-            $(".md-subhead .published").html(newDate)
+            $(".md-subhead span").text(newDate)
         }
     },
-    created() {
+    mounted() {
         this.chanceDate()
     }
 }
